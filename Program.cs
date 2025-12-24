@@ -1,10 +1,13 @@
-﻿namespace SWE201_235060002
+class Program
 {
-    internal class Program
+    static void Main(string[] args)
     {
-        static void Main(string[] args)
-        {
-            Console.WriteLine("Hello, World!");
-        }
+        Book book = new Book(1, "Clean Code", "Robert C. Martin");
+        Member member = new Member(101, "Aday Akyüz");
+
+        Borrow borrow = new Borrow(book, member, 14);
+        borrow.ShowBorrowInfo();
+
+        Console.ReadLine();
     }
 }
